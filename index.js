@@ -12,8 +12,8 @@
 
 
 const express = require('express');
-const socketIo = require('socket.io');
 const http = require('http');
+const socketIo = require('socket.io');
 
 const app = express();
 const server = http.createServer(app);
@@ -38,10 +38,7 @@ io.on('connection', (socket) => {
     });
 });
 
-module.exports = (req, res) => {
-    if (!req.socket.server.io) {
-        console.log('Starting socket.io server');
-        io.attach(req.socket.server);
-    }
-    server(req, res);
-};
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+    console.log('Server is running on port ${PORT}');
+});
