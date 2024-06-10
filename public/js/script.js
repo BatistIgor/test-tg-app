@@ -3,6 +3,7 @@ let firstName = " ";
 let lastName = " ";
 
 document.addEventListener('DOMContentLoaded', () => {
+  incrementCounter();
   Telegram.WebApp.ready();
 
   const telegramUserId = Telegram.WebApp.initDataUnsafe.user?.id;
