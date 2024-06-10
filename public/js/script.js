@@ -1,6 +1,6 @@
 let userId = "2121";
-let firstName = "Igor";
-let lastName = "Batist";
+let firstName = "Какой-то";
+let lastName = ". . .";
 
 document.addEventListener('DOMContentLoaded', () => {
   Telegram.WebApp.ready();
