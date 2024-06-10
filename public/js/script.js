@@ -1,23 +1,20 @@
-let userId = "2121";
-let firstName = "Какой-то";
-let lastName = ". . .";
+let Iduser = "2121";
+let firstName = " ";
+let lastName = " ";
 
 document.addEventListener('DOMContentLoaded', () => {
   Telegram.WebApp.ready();
 
-  // Попытка получить данные пользователя из Telegram Web Apps
   const telegramUserId = Telegram.WebApp.initDataUnsafe.user?.id;
   const telegramFirstName = Telegram.WebApp.initDataUnsafe.user?.first_name;
   const telegramLastName = Telegram.WebApp.initDataUnsafe.user?.last_name;
 
-  // Если данные пользователя получены из Telegram, используем их
   if (telegramUserId) {
-      userId = telegramUserId || userId;
-      firstName = telegramFirstName || firstName; // Используем значение из Telegram, если оно есть
-      lastName = telegramLastName || lastName;   // Используем значение из Telegram, если оно есть
+    Iduser = telegramUserId || Iduser;
+      firstName = telegramFirstName || firstName;
+      lastName = telegramLastName || lastName;
   }
 
-  // Отображение ID пользователя на странице
   const userNameElement = document.getElementById('userName');
   if (firstName) {
       userNameElement.textContent = firstName + (lastName ? ` ${lastName}` : '');
@@ -32,7 +29,7 @@ function incrementCounter() {
     headers: {
         'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ userId: "2121" }),})
+    body: JSON.stringify({ userId: Iduser }),})
   .then(response => response.json())
   .then(data => {
       document.getElementById("count").innerText = data.count;

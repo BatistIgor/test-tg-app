@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
 });
 
+app.get('/statistic', (req, res) => {
+    res.sendFile(__dirname + '/public/statistic.html');
+});
+
 let counters = {};
 
 app.post('/increment', (req, res) => {
