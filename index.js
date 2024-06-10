@@ -34,6 +34,23 @@ app.post('/increment', (req, res) => {
     res.json({ count: counters[userId] });
 });
 
+app.post('/coins', (req, res) => {
+    const userId = req.body.userId;
+    console.log(userId);
+
+    if (!userId) {
+        return res.status(400).send('userId is required');
+    }
+
+    if (!counters[userId]) {
+        counters[userId] = 0;
+    }
+
+    console.log(Object.keys(counters));
+    console.log(counters[userId]);
+    res.json({ count: counters[userId] });
+});
+
 app.listen(PORT, () => {
     console.log(`Сервер запущен на порту ${PORT}`);
 });

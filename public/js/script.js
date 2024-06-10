@@ -3,7 +3,6 @@ let firstName = " ";
 let lastName = " ";
 
 document.addEventListener('DOMContentLoaded', () => {
-  incrementCounter();
   Telegram.WebApp.ready();
 
   const telegramUserId = Telegram.WebApp.initDataUnsafe.user?.id;
@@ -22,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
       userNameElement.textContent = 'User name not available';
   }
+  
+  getStartCoins();
 });
 
 function incrementCounter() {
@@ -39,3 +40,20 @@ function incrementCounter() {
       console.error('Ошибка:', error);
   });
 }
+
+function getStartCoins() {
+  fetch('/coins', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ userId: Iduser }),})
+  .then(response => response.json())
+  .then(data => {
+      document.getElementById("count").innerText = data.count;
+  })
+  .catch(error => {
+      console.error('Ошибка:', error);
+  });
+}
+
