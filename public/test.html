@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap Game</title>
+    <style>
+        #counter {
+            font-size: 2em;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="tapButton">Tap</button>
+    <p>Counter: <span id="counter">0</span></p>
+    <input type="range" id="range" max="500" value="500" readonly disabled>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tapButton = document.getElementById('tapButton');
+            const counterDisplay = document.getElementById('counter');
+            const range = document.getElementById('range');
+
+            let counter = 0;
+            let maxRange = 500;
+            range.max = maxRange;
+            range.value = maxRange;
+
+            tapButton.addEventListener('click', () => {
+                if (range.value > 0) {
+                    counter++;
+                    range.value--;
+                    counterDisplay.textContent = counter;
+                }
+            });
+
+            setInterval(() => {
+                if (range.value < maxRange) {
+                    range.value++;
+                }
+            }, 2000);
+});
+    </script>
+</body>
+</html>

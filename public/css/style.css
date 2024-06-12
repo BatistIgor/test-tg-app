@@ -12,6 +12,23 @@ a {
     color: inherit;
 }
 
+button {
+    text-decoration: none;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    touch-action: manipulation !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+}
+
 .main {
     background-color: #ffffff;
     width: 300px;
@@ -33,12 +50,11 @@ a {
 
 .menu {
     font-size: 16px;
-    cursor: pointer;
 }
 
 .balance {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .balance p {
@@ -49,6 +65,7 @@ a {
 .balance h2 {
     margin: 0;
     font-size: 36px;
+    height: 36px;
 }
 
 .actions {
@@ -56,6 +73,7 @@ a {
     justify-content: center;
     gap: 30px;
     margin-bottom: 30px;
+    user-select: none !important;
 }
 
 .actions__btn {
@@ -64,89 +82,58 @@ a {
     border-radius: 5px;
     padding: 10px;
     cursor: pointer;
-    width: 40%;
+    width: 50%;
+    height: 50%;
     transition: 0.3s;
+    outline: none;
+    user-select: none !important;
 }
 
 .actions__btn:active {
     transform: scale(1.1);
 }
 
-.wallet-earn {
+
+.actions__img,
+.actions__img:hover,
+.actions__img:active,
+.actions__img:focus-visible{
+    outline: none !important;
+    box-shadow: none !important;
+    pointer-events: none !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+}
+
+
+.range {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.grach-list {
-    margin: 0 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.coins {
-    background-color: #00aaff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 5px;
-}
-
-.wallet-earn-info {
-    display: flex;
-    align-items: center;
-}
-
-.wallet-earn-info p {
-    margin: 0;
-}
-
-.wallet-earn .icon {
-    width: 24px;
-    height: 24px;
-    background-color: #e0e0e0;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.open-button {
-    background-color: #00aaff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-.deviz {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-}
-
-.deviz-start {
-    color: #999;
-}
-
-.deviz .icon {
-    width: 24px;
-    height: 24px;
-    background-color: #e0e0e0;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.deviz p {
-    margin: 0;
-}
-
-.grach-title {
     margin: 0 auto;
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 8px 8px;
     text-align: center;
-    margin-bottom: 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 16px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-button-active {
+    background-color: #0056b3;
 }

@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
       userNameElement.textContent = 'User name not available';
   }
-  
+
   getStartCoins();
 });
 
@@ -56,4 +56,21 @@ function getStartCoins() {
       console.error('Ошибка:', error);
   });
 }
+
+window.Telegram.WebApp.ready(function() {
+  Telegram.WebApp.expand();
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.menu-button');
+
+  buttons.forEach(button => {
+      button.addEventListener('click', () => {
+          buttons.forEach(btn => btn.classList.remove('menu-button-active'));
+          button.classList.add('menu-button-active');
+      });
+  });
+});
+
 
