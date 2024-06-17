@@ -146,6 +146,9 @@ button {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0 9px;
+    height: calc(100vh - 202.6px);
+    display: flex;
+    flex-direction: column;
 }
 
 .coin__btn{
@@ -174,6 +177,7 @@ button {
 }
 
 .events {
+    margin-top: auto;
     padding-bottom: 23px;
 }
 
