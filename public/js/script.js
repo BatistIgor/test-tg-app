@@ -2,6 +2,10 @@ let Iduser = "2121";
 let firstName = " ";
 let lastName = " ";
 
+Telegram.WebApp.ready();
+Telegram.WebApp.expand();
+Telegram.WebApp.setHeaderColor("bg_color","#231d0f");
+
 document.addEventListener('DOMContentLoaded', () => {
   Telegram.WebApp.ready();
 
