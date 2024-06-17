@@ -6,7 +6,7 @@ let lastName = " ";
 document.addEventListener('DOMContentLoaded', () => {
   Telegram.WebApp.ready();
   Telegram.WebApp.expand();
-  Telegram.WebApp.setHeaderColor("bg_color","#231d0f");
+  Telegram.WebApp.setBackgroundColor("#231d0f");
 
   const telegramUserId = Telegram.WebApp.initDataUnsafe.user?.id;
   const telegramFirstName = Telegram.WebApp.initDataUnsafe.user?.first_name;
