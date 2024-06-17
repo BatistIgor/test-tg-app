@@ -42,7 +42,7 @@ button {
 
 
 .header__inner {
-    background-color: #664900;
+    background-color: #231d0f;
     padding: 6px 9px 0 9px;
 
 }
@@ -71,14 +71,14 @@ button {
 }
 
 .header__content {
-    padding-bottom: 38px;
+    padding-bottom: 16px;
 }
 
 .counters {
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    margin-bottom: 28px;
+    margin-bottom: 13px;
 }
 
 .counter {
@@ -89,18 +89,17 @@ button {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 8px;
 }
 
 .counter--bonus {
     max-width: 163px;
-    height: 94px;
+    height: 65px;
     width: 100%;
 }
 
 .counter--main {
     max-width: 214px;
-    height: 94px;
+    height: 65px;
     width: 100%;
 }
 
@@ -124,7 +123,7 @@ button {
 .income {
     margin: 0 auto;
     max-width: 327px;
-    height: 38px;
+    height: 25px;
     width: 100%;
     background-color: #FFCA5A;
     border-radius: 8px;
@@ -140,11 +139,12 @@ button {
 }
 
 .coin {
-
 }
 
 .coin__inner {
-    background-color: #F7EFEF;
+    background-image: url(../img/bg-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 0 9px;
 }
 
@@ -154,9 +154,11 @@ button {
     align-items: center;
     padding: 30px 0;
     border-radius: 50%;
+    
 }
 
 .btn {
+    
     transition: 0.4s;
     border-radius: 50%;
 }
@@ -166,6 +168,8 @@ button {
 }
 
 .btn__img {
+    max-width: 50%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
     border-radius: 50%;
 }
 
@@ -176,6 +180,7 @@ button {
 
 .event {
     padding-top: 2px;
+    padding-bottom: 2px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -188,6 +193,7 @@ button {
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
+    color: #b7b2b2;
 }
 
 .event__currency {
@@ -231,7 +237,7 @@ button {
     display: flex;
     justify-content: center;
     gap: 8px;
-    background-color: #664900;
+    background-color: #231d0f;
     padding-bottom: 30px;
 }
 
