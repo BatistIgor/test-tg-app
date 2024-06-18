@@ -41,7 +41,7 @@ function incrementCounter() {
     body: JSON.stringify({ userId: Iduser }),})
   .then(response => response.json())
   .then(data => {
-      document.getElementById("count").innerText = data.count;
+      document.getElementById("cpoins").innerText = data.count;
   })
   .catch(error => {
       console.error('Ошибка:', error);
@@ -57,7 +57,7 @@ function getStartCoins() {
     body: JSON.stringify({ userId: Iduser }),})
   .then(response => response.json())
   .then(data => {
-      document.getElementById("count").innerText = data.count;
+      document.getElementById("cpoins").innerText = data.count;
   })
   .catch(error => {
       console.error('Ошибка:', error);
